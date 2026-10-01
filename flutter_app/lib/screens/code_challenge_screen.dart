@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import '../theme/app_theme.dart';
+import '../services/audio_service.dart';
 
 class CodeChallengeScreen extends StatefulWidget {
   final VoidCallback onBack;
@@ -19,12 +20,16 @@ class _CodeChallengeScreenState extends State<CodeChallengeScreen> {
 
   void check() {
     if (selected == null) return;
+    final correct = (selected == '5');
     setState(() {
       isChecked = true;
-      isCorrect = (selected == '5');
+      isCorrect = correct;
     });
-    if (selected == '5') {
+    if (correct) {
+      AudioService.playCorrect();
       widget.onWin(50, 20);
+    } else {
+      AudioService.playWrong();
     }
   }
 

@@ -59,9 +59,48 @@ flutter:
 - coin.mp3 / coin.wav: Dual-tone arcade coin collect chime
 - jump.mp3 / jump.wav: Character platform jump upward sweep
 - correct.mp3 / correct.wav: C-major chord challenge success
-- wrong.mp3 / wrong.wav: Error buzz tone
+- wrong.mp3 / wrong.wav: Error buzz tone (negative chord)
 - fanfare.mp3 / fanfare.wav: Level-up brass fanfare sequence
 - click.mp3 / click.wav: Mechanical UI tap click`,
+
+    'android/app/build.gradle': `android {
+    namespace = "com.codequest.game"
+    compileSdk = 34
+
+    // Configured for Android NDK 26.3.11579264
+    ndkVersion = "26.3.11579264"
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    defaultConfig {
+        applicationId = "com.codequest.game"
+        minSdk = 24
+        targetSdk = 34
+        versionCode = flutterVersionCode.toInteger()
+        versionName = flutterVersionName
+
+        // Native ABI architectures supported by NDK 26.3
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86_64"
+        }
+    }
+}`,
+
+    'android/gradle.properties': `org.gradle.jvmargs=-Xmx4G -XX:MaxMetaspaceSize=1G -XX:+UseG1GC
+android.useAndroidX=true
+android.enableJetifier=true
+android.nonTransitiveRClass=true
+# Configured for Android NDK 26.3.11579264
+android.ndkVersion=26.3.11579264`,
+
+    'android/local.properties': `## Android SDK & NDK 26.3.11579264 Path
+sdk.dir=/Users/YOUR_USER/Library/Android/sdk
+ndk.dir=/Users/YOUR_USER/Library/Android/sdk/ndk/26.3.11579264
+flutter.sdk=/path/to/flutter
+flutter.buildMode=debug`,
 
     'lib/main.dart': `import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
