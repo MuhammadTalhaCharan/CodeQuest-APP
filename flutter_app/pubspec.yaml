@@ -1,0 +1,40 @@
+name: codequest
+description: "CodeQuest - Gamified Programming Learning Mobile Application in Flutter"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  provider: ^6.1.2
+  google_fonts: ^6.1.0
+  lucide_icons: ^0.252.0
+  confetti: ^0.7.0
+  audioplayers: ^5.2.1
+  shared_preferences: ^2.2.2
+  http: ^1.2.0
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/avatar.png
+    - assets/images/logo.png
+    - assets/images/app_icon.png
+    - assets/images/trophy.png
+    - assets/audio/coin.mp3
+    - assets/audio/jump.mp3
+    - assets/audio/correct.mp3
+    - assets/audio/wrong.mp3
+    - assets/audio/fanfare.mp3
+    - assets/audio/click.mp3

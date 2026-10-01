@@ -1,0 +1,40 @@
+import { CertificateItem } from '../types';
+
+export const INITIAL_CERTIFICATES: CertificateItem[] = [
+  {
+    id: 'cert_digiskills',
+    title: 'Data Analytics & BI',
+    organization: 'DigiSkills Training Program',
+    issuerLogo: 'Award',
+    course: 'Data Analytics & Business Intelligence with Python',
+    recipientName: 'Talha',
+    completionDate: 'September 2026',
+    credentialId: 'DS-2026-8841-PY',
+    status: 'Completed',
+    skills: ['Python', 'Pandas', 'Data Cleaning', 'Data Structures', 'Data Visualization'],
+  },
+  {
+    id: 'cert_python_beg',
+    title: 'Python Programming',
+    organization: 'CodeQuest Academy',
+    issuerLogo: 'Code',
+    course: 'Python Fundamentals & Interactive Game Logic',
+    recipientName: 'Talha',
+    completionDate: 'September 2026',
+    credentialId: 'CQ-PY-BEG-9902',
+    status: 'Completed',
+    skills: ['Variables', 'Conditional Branching', 'Loops', 'Syntax Mastery', 'Algorithms'],
+  },
+  {
+    id: 'cert_fullstack_dart',
+    title: 'Modern Mobile Logic',
+    organization: 'CodeQuest Pro Engineering',
+    issuerLogo: 'Layers',
+    course: 'Dart & Reactive State Patterns',
+    recipientName: 'Talha',
+    completionDate: 'In Progress (Expected Oct 2026)',
+    credentialId: 'CQ-DART-INT-3312',
+    status: 'Completed',
+    skills: ['Dart', 'Async/Await', 'OOP', 'Data Pipelines'],
+  },
+];

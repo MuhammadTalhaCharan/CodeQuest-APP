@@ -1,0 +1,6 @@
+{
+  "name": "CodeQuest - Gamified Programming Learning",
+  "description": "Learn programming through interactive games, visual code puzzles, adaptive learning paths, and an AI mentor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
